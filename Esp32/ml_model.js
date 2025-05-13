@@ -2,7 +2,7 @@ const axios = require("axios");
 
 async function predictHealthStatus(hr, spo2) {
   try {
-    const response = await axios.post("http://localhost:8000/predict", {
+    const response = await axios.post("https://patient-luck-production.up.railway.app", {
       heartRate: hr,
       spo2: spo2,
     });
